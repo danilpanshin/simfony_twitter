@@ -1,0 +1,12 @@
+.create-post {
+    min-height: 200px;
+    max-width: 30%;
+    margin: 100px auto;
+}
+.create-post--title {
+    margin-bottom: 15px;
+}
+.create-post--body {
+    min-height: 200px;
+    margin-bottom: 15px;
+}

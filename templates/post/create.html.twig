@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Create post{% endblock %}
+
+{% block body %}
+    <div class="col-md-12">
+        <div class="create-post">
+            {{ form_start(form) }}
+
+            {{ form_row(form.title, {'attr': {
+                'class' : 'form-control create-post--title',
+            }}) }}
+
+            {{ form_row(form.body, { 'attr': {
+                'rows' : '10',
+                'class' : 'form-control create-post--body',
+                'cols' : '10' }}) }}
+            <button class="btn btn-default" type="submit">Сохранить</button>
+            {{ form_end(form) }}
+        </div>
+    </div>
+
+{% endblock %}

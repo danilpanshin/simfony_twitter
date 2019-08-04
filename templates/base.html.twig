@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/signin.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 py-4">
+                    <h4 class="text-white">Actions</h4>
+                    <ul class="list-unstyled user-actions">
+                        <li><a href="#" class="text-white">Register</a></li>
+                        <li><a href="#" class="text-white">Login</a></li>
+                        <li><a href="#" class="text-white">Posts</a></li>
+                        <li><a href="#" class="text-white">Users</a></li>
+                        <li><a href="#" class="text-white">Create</a></li>
+                        <li><a href="#" class="text-white">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container d-flex justify-content-between">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+                <strong>Login at User</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main role="main">
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">Posts page</h1>
+        </div>
+    </section>
+
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                {% block body %}{% endblock %}
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<footer class="text-muted">
+    <div class="container">
+        <p class="float-right">
+            <a href="#">Back to top</a>
+        </p>
+        <p>My Symfony Project</p>
+    </div>
+</footer>
+
+<script src="{{ asset('/js/jquery.js') }}"></script>
+<script src="{{ asset('/js/popper.js') }}"></script>
+<script src="{{ asset('/js/bootstrap.min.js') }}"></script>
+</body>
+
+</html>

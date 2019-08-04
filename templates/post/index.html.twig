@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+{% block title %}All posts{% endblock %}
+{% block body %}
+    {% for post in posts %}
+        <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+                <div class="card-body">
+                    <p class="card-text"><b>{{ post.title | truncate(5) }}</b></p>
+                    <p class="card-text">{{ post.body | truncate(50) }}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <a href="{{ path('post', {'id': post.id}) }}" class="btn btn-sm btn-outline-secondary">Read more</a>
+                        </div>
+                        <small class="text-muted">9 likes</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
